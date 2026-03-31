@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn age-based investment allocation strategies and plan your monthly money split with a practical 50-30-20 calculator."
+    />
+    <title>Investment Allocation Guide by Age</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="container top-nav__inner">
+        <a class="brand" href="#top">FinGuide</a>
+        <div class="menu-links" aria-label="Primary">
+          <a href="#intro">Intro</a>
+          <a href="#recommended">By Age</a>
+          <a href="#age-example">Age Example</a>
+          <a href="#strategies">Strategies</a>
+          <a href="#planner">Planner</a>
+          <a href="#notes">Notes</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div id="top" class="hero__content container">
+        <p class="kicker">Personal Finance Education</p>
+        <h1>Investment Allocation Guide by Age</h1>
+        <p class="subtitle">
+          Your age, risk tolerance, and financial goals influence how you can
+          spread investments across growth and stability assets.
+        </p>
+        <a class="btn" href="#strategies">Explore Strategies</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card section" id="intro">
+        <h2>How to Use This Guide</h2>
+        <p>
+          Age matters in investing because it affects your time horizon and your
+          ability to recover from market declines. A longer horizon usually
+          allows more growth-oriented allocation, while a shorter horizon often
+          increases focus on stability and capital preservation.
+        </p>
+        <p>
+          Younger investors can usually hold higher equity exposure because they
+          have more years to ride through volatility. As retirement gets closer,
+          many investors gradually move toward more balanced and defensive mixes.
+        </p>
+        <p class="note">
+          This website is educational guidance and not a substitute for
+          personalized financial planning.
+        </p>
+      </section>
+
+      <section class="card section recommended" id="recommended">
+        <h2>Recommended Strategy by Age</h2>
+        <div class="age-bands">
+          <p><strong>18-25:</strong> Aggressive Growth or Aggressive Balanced</p>
+          <p><strong>26-35:</strong> Balanced to Aggressive</p>
+          <p><strong>36-45:</strong> Balanced</p>
+          <p><strong>46-55:</strong> Conservative Balanced</p>
+          <p><strong>56+:</strong> Conservative</p>
+        </div>
+        <div class="highlight">
+          <label for="ageInput" class="age-input-label">Enter Your Age</label>
+          <input id="ageInput" type="number" min="18" max="100" step="1" value="26" />
+          <h3 id="recommendedTitle"></h3>
+          <p id="recommendedSummary"></p>
+          <div class="grid-2">
+            <ul class="list compact" id="recommendedList"></ul>
+            <div class="chart-wrap">
+              <canvas id="recommendedChart" aria-label="Recommended allocation chart by age"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card section" id="age-example">
+        <h2 id="ageExampleTitle">Age-Based Example: What It Often Means</h2>
+        <div class="grid-2">
+          <div>
+            <ul class="list" id="ageExampleList">
+              <li>Enter your age above to see a personalized educational example.</li>
+            </ul>
+          </div>
+          <div class="pill">
+            <h3>Guiding Principle</h3>
+            <p id="ageExamplePrinciple"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="strategies">
+        <div class="section-head">
+          <h2>Allocation Strategy Comparison</h2>
+          <p>
+            Educational model portfolios with example percentages across common
+            asset buckets.
+          </p>
+        </div>
+        <div id="strategyCards" class="strategy-grid"></div>
+      </section>
+
+      <section class="card section" id="planner">
+        <h2>Salary and Investment Planner (50-30-20)</h2>
+        <p>
+          Enter your monthly salary and monthly investment amount. The planner
+          compares your current investing level to the 20% benchmark.
+        </p>
+        <div class="planner-grid">
+          <div class="input-panel">
+            <label for="salary">Monthly Salary (INR)</label>
+            <input id="salary" type="number" min="0" step="1000" value="80000" />
+
+            <label for="investment">Monthly Investment (INR)</label>
+            <input id="investment" type="number" min="0" step="500" value="18000" />
+
+            <div class="result-box">
+              <p><span>Needs (50%):</span> <strong id="needsValue">-</strong></p>
+              <p><span>Wants (30%):</span> <strong id="wantsValue">-</strong></p>
+              <p><span>Savings / Investments (20%):</span> <strong id="savingsValue">-</strong></p>
+              <p><span>Investment % of Salary:</span> <strong id="investPercent">-</strong></p>
+              <p><span>Remaining Disposable Amount:</span> <strong id="remainingAmount">-</strong></p>
+            </div>
+            <p id="benchmarkMessage" class="benchmark"></p>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="budgetChart" aria-label="50 30 20 rule chart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="card section" id="notes">
+        <h2>Educational Notes</h2>
+        <p>
+          These allocation percentages are examples, not rigid rules. Real
+          portfolios should be tailored to your personal context.
+        </p>
+        <ul class="list">
+          <li>Financial goals and target timelines</li>
+          <li>Emergency fund readiness</li>
+          <li>Debt obligations and repayment pressure</li>
+          <li>Dependents and family responsibilities</li>
+          <li>Income stability and career variability</li>
+          <li>Risk tolerance and emotional comfort with volatility</li>
+          <li>Overall investment time horizon</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer" id="disclaimer">
+      <div class="container">
+        <p>
+          I am not an advisor. Please do detailed analysis before choosing any
+          strategy.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
