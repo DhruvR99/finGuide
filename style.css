@@ -71,11 +71,28 @@ p {
 }
 
 .brand {
+  display: inline-flex;
+  flex-direction: column;
   text-decoration: none;
   font-family: "Outfit", sans-serif;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: 0.2px;
   color: #15426c;
+}
+
+.brand__main {
+  font-size: 1.08rem;
+}
+
+.brand__sub {
+  margin-top: 0.14rem;
+  margin-left: 2.95ch;
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: #4f6178;
 }
 
 .menu-links {
