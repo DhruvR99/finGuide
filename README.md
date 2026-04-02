@@ -3,6 +3,10 @@
 A static, mobile-friendly educational website for personal finance and investment learning.  
 It explains age-based allocation thinking, compares multiple strategy models, provides an age-26 example recommendation, and includes a live 50-30-20 salary planner.
 
+## Live Domain
+
+- https://finguide.nxtfusion.com
+
 ## Features
 
 - Hero section and beginner-friendly user guide
